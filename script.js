@@ -1,16 +1,12 @@
 let humanScore = 0;
 let computerScore = 0;
 
-//function to generate random choice for computer
+//math.random and math.floor to generate random index to provide random output for computer choice
 
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
 }
-
-// console.log(getComputerChoice());
-
-// fucntion to ask human for his desired input
 
 function getHumanChoice() {
   let humanInput = prompt(`enter your choice`);
@@ -36,7 +32,6 @@ function showScore() {
     );
   else console.log(`draw`);
 }
-// console.log(getComputerChoice());
 
 function playRound(computerChoice, humanChoice) {
   if (computerChoice == humanChoice) console.log(`Draw`);
