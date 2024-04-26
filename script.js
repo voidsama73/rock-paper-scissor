@@ -1,6 +1,8 @@
 let humanScore = 0;
 let computerScore = 0;
 
+//function to generate random choice for computer
+
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
@@ -8,10 +10,14 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
+// fucntion to ask human for his desired input
+
 function getHumanChoice() {
   let humanInput = prompt(`enter your choice`);
   return humanInput.toLocaleLowerCase();
 }
+
+//declaring the winner based on score
 
 function showScore() {
   console.log(`humanscore:${humanScore}`);
@@ -58,6 +64,7 @@ function playRound(computerChoice, humanChoice) {
 function playGame() {
   let rounds = prompt(`enter the number of rounds you want to play`);
 
+  //takes input from user to choose no. of rounds in game
   for (let i = 1; i <= rounds; i++) {
     playRound(getComputerChoice(), getHumanChoice());
   }
