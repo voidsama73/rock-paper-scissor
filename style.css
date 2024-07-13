@@ -1,0 +1,147 @@
+:root {
+  --black: #0c0c0c;
+  --brown: #481e14;
+  --marooon: #9b3922;
+  --orange: #f2613f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--marooon);
+  position: relative;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: start;
+  max-width: 10rem;
+}
+
+.scorecard {
+  margin: 2rem auto;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 2px solid var(--brown);
+  padding: clamp(0.5rem, 0.8rem + 1vw, 1rem);
+}
+
+.scorewrapper {
+  display: flex;
+  gap: 3rem;
+  margin-block: auto;
+}
+
+.cpu,
+.player {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.score {
+  background-color: rgb(234, 199, 199);
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--brown);
+}
+
+.result {
+  margin: 4rem auto;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: bolder;
+  background-color: #0c0c0c;
+  width: max-content;
+  color: var(--marooon);
+  border-radius: 1rem;
+}
+h2 {
+  text-align: center;
+  color: var(--orange);
+}
+
+.choices {
+  padding: 2rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 22rem;
+  position: relative;
+}
+
+.choices button {
+  border: none;
+  background-color: var(--orange);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.choices button img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.choices button:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
+  transform: translatez(-30%);
+}
+
+.popup {
+  position: absolute;
+  top: 30%;
+  transform: translatez(-70%);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(37, 125, 163, 0.203);
+  backdrop-filter: blur(40px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width: 50rem;
+  height: 20rem;
+  display: none;
+}
+
+.popup h1 {
+  font-size: 4rem;
+  padding: 1rem;
+  text-align: center;
+  min-width: 40rem;
+}
+
+.newRound {
+  padding: 1rem;
+  font-weight: bolder;
+  color: var(--orange);
+  background-color: var(--brown);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}

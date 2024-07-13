@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Rock Paper Scissor</h1>
-    <script src="script.js"></script>
+    <div class="scorecard">
+      <h1>Rock Paper Scissor</h1>
+      <div class="scorewrapper">
+        <div class="cpu">
+          <p>YOU</p>
+          <div class="score playerscore">0</div>
+        </div>
+        <div class="player">
+          <p>CPU</p>
+          <div class="score cpuscore">0</div>
+        </div>
+      </div>
+    </div>
+    <h2>Make Your Choice</h2>
+    <div class="choices">
+      <button id="rock"><img src="rock.png" alt="" /></button>
+      <button id="paper"><img src="paper.png" alt="" /></button>
+      <button id="scissor"><img src="scissor.png" alt="" /></button>
+    </div>
+    <div class="popup win">
+      <img src="confetti-birthday-svgrepo-com.svg" alt="" />
+      <h1>yay! you win</h1>
+      <button class="newRound">Play Again</button>
+    </div>
+    <div class="popup loose">
+      <img src="loudly-crying-face-svgrepo-com.svg" alt="" />
+      <h1>loooser!</h1>
+      <button class="newRound">Play Again</button>
+    </div>
+    <div class="result">READY</div>
   </body>
 </html>
